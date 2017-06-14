@@ -1,0 +1,14 @@
+{
+  "name": "somen",
+  "version": "0.0.1",
+  "description": "Display slack's message on the desktop",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "slack"
+  ],
+  "author": "myamamoto88",
+  "license": "MIT"
+}
