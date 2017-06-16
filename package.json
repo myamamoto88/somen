@@ -4,7 +4,8 @@
   "description": "Display slack's message on the desktop",
   "main": "src/main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "electron .",
+    "build": "coffee --compile **/*.coffee"
   },
   "keywords": [
     "slack"
@@ -13,6 +14,7 @@
   "license": "MIT",
   "dependencies": {
     "@slack/client": "^3.10.0",
+    "coffee": "^3.3.2",
     "electron": "^1.6.11",
     "nicojs": "^1.1.6"
   }
