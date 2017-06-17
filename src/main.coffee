@@ -17,7 +17,7 @@ app.on 'ready', ->
         transparent : true
     })
 
-    window.loadURL('file://' + __dirname + '/screen.html')
+    window.loadURL('file://' + __dirname + '/view/html/screen.html')
     window.setIgnoreMouseEvents true
 
     slack.setup(window)
