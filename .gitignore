@@ -1,8 +1,8 @@
-# node_modules
 node_modules/
+somen-darwin-x64/
 
 *.log
 *.js
 
-# .DS_Store
+.envrc
 .DS_Store
