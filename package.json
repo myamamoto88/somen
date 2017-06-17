@@ -5,7 +5,7 @@
   "main": "src/main.js",
   "scripts": {
     "start": "electron .",
-    "build": "coffee --compile **/*.coffee"
+    "build": "coffee --compile src/"
   },
   "keywords": [
     "slack"
