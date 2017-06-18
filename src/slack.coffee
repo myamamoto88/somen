@@ -3,9 +3,19 @@ WebClient  = require('@slack/client').WebClient
 RTM_EVENTS = require('@slack/client').RTM_EVENTS
 
 class Slack
-    set_token: (token) ->
-        console.log 'Slack.new', token
+    getToken: ->
+        @token
+
+    setToken: (token) ->
+        console.log 'token', token
         @token = token
+
+    getChannel: ->
+        @channel
+
+    setChannel: (channel) ->
+        console.log 'channel', channel
+        @channel = channel
 
     test: (callback) ->
         console.log "test", @token
@@ -16,8 +26,8 @@ class Slack
         @slack = new RtmClient @token
         @slack.start()
 
-        @slack.on RTM_EVENTS.MESSAGE, (data) ->
-            console.log data
-            window.webContents.send 'message', data['text']
+        @slack.on RTM_EVENTS.MESSAGE, (data) =>
+            return if data.channel != @getChannel()
+            window.webContents.send 'message', data.text
 
-module.exports = { Slack: Slack }
+module.exports = new Slack
