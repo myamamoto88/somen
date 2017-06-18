@@ -3,6 +3,7 @@ somen-darwin-x64/
 
 *.log
 *.js
+*.html
 
 .envrc
 .DS_Store
