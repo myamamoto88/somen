@@ -1,0 +1,8 @@
+@font-face {
+	font-family: '07YasashisaAntique';
+	src: url('font/07YasashisaAntique.otf');
+}
+
+body {
+	font-family: '07YasashisaAntique';
+}
