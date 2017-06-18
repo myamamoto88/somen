@@ -18,12 +18,12 @@ class Slack
         @channel = channel
 
     test: (callback) ->
-        console.log "test", @token
-        client = new WebClient(@token)
+        console.log "test", @getToken()
+        client = new WebClient(@getToken())
         client.api.test callback
 
     setup: (window) ->
-        @slack = new RtmClient @token
+        @slack = new RtmClient @getToken()
         @slack.start()
 
         @slack.on RTM_EVENTS.MESSAGE, (data) =>
