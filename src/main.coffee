@@ -2,6 +2,7 @@ electron   = require 'electron'
 app        = electron.app
 ipc        = electron.ipcMain
 controller = null
+screen     = null
 
 Slack = require('./slack').Slack
 slack = new Slack()
@@ -20,3 +21,9 @@ ipc.on 'set-token', (event, token) ->
             controller.close()
         else
             controller.webContents.send 'invalid-token'
+
+ipc.on 'close', ->
+	app.quit()
+
+ipc.on 'mini', ->
+    controller.minimize()

@@ -9,10 +9,12 @@ token-setting
 
 	style(scoped).
 		:scope {
+			position: absolute;
 			display: block;
-			width: 300px;
-			height: 50px;
-			margin: 0 auto;
+			top: 120px;
+			width: 380px;
+			height: 100px;
+			margin: 0 10px;
 			margin-bottom: 20px;
 		}
 		:scope:after {
@@ -22,7 +24,7 @@ token-setting
 		}
 		:scope #token {
 			float: left;
-			width: 250px;
+			width: 330px;
 			height: 50px;
 			box-sizing: border-box;
 			border: solid 1px #D57774;
