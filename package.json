@@ -5,17 +5,22 @@
   "main": "src/main.js",
   "scripts": {
     "start": "electron .",
-    "build": "coffee --compile src/"
+    "build": "coffee --compile src/ && riot --template pug --type coffee src/view/component src/view/component"
   },
   "keywords": [
     "slack"
   ],
   "author": "myamamoto88",
   "license": "MIT",
+  "devDependencies": {
+    "coffee-script": "^1.12.6",
+    "pug": "^0.1.0"
+  },
   "dependencies": {
     "@slack/client": "^3.10.0",
     "coffee": "^3.3.2",
     "electron": "^1.6.11",
-    "nicojs": "^1.1.6"
+    "nicojs": "^1.1.6",
+    "riot": "^3.6.0"
   }
 }
