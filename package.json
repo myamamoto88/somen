@@ -5,7 +5,7 @@
   "main": "src/main.js",
   "scripts": {
     "start": "electron .",
-    "build": "coffee --compile src/ && riot --template pug --type coffee src/view/component src/view/component"
+    "build": "coffee --compile src/ && riot --template pug --type coffee src/view/component src/view/component && jade src/view/html/"
   },
   "keywords": [
     "slack"
@@ -14,6 +14,7 @@
   "license": "MIT",
   "devDependencies": {
     "coffee-script": "^1.12.6",
+    "jade-cli": "^0.1.1",
     "pug": "^0.1.0"
   },
   "dependencies": {
